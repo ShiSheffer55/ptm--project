@@ -11,7 +11,7 @@ public class Message {
 
     public Message(byte[] data) {
         this.data = data;
-        this.asText = data.toString();
+        this.asText = new String(data);
         this.asDouble = tryParse(this.asText);
         this.date = new Date();
     }
@@ -30,7 +30,6 @@ public class Message {
         try{
             return Double.parseDouble(data);
         }catch(NumberFormatException e){
-                System.out.println(e.getMessage());
                 return Double.NaN;
         }
     }
