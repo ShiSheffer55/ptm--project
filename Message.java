@@ -22,8 +22,8 @@ public class Message {
     }
 
 
-    public Message(Double asDouble) {
-        this(asDouble.toString());
+    public Message(double asDouble) {
+        this(Double.toString(asDouble));
     }
 
     private double tryParse(String data){
