@@ -17,7 +17,7 @@ public class Message {
     }
 
 
-    public Message(String asText) {///dfdsfhashgas
+    public Message(String asText) {//sdzsd
        this(asText.getBytes());
     }
 
