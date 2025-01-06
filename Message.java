@@ -17,7 +17,7 @@ public class Message {
     }
 
 
-    public Message(String asText) {//sdzsd
+    public Message(String asText) {
        this(asText.getBytes());
     }
 
