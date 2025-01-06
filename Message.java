@@ -12,7 +12,7 @@ public class Message {
     public Message(byte[] data) {
         this.data = data;
         this.asText = new String(data);
-        this.asDouble = tryParse(this.asText);
+        this.asDouble = tryParse(this.asText);//cvbfbvxv
         this.date = new Date();
     }
 
