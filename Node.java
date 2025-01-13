@@ -1,7 +1,9 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class Node {
@@ -21,13 +23,28 @@ public class Node {
     public List<Node> getEdges(){return this.edges; }
     public Message getMsg() {return this.msg;}
     
+    public void setName(String name) {this.name = name;}
+    public void setEdges(List<Node> edges) {this.edges = edges; }
+    public void setMsg(Message msg) {this.msg = msg;} 
+    
     
     public void addEdge(Node n) {
     	this.edges.add(n); 
     }
     
     public boolean hasCycles(Node n) {
-    	
+    	Set<Node> hasSeen = new HashSet<>(); 
+    	Set<Node> k = new HashSet<>(); 
+    	return hasCyclesHelper(this, hasSeen, k); 
+    }
+    
+    public boolean hasCyclesHelper(Node current, Set<Node> hasSeen, Set<Node> k) {
+    	if(k.contains(current)) {
+    		return true; 
+    	}
+    	if(hasSeen.contains(current)) {
+    		return false; 
+    	}
     }
     
     
