@@ -15,7 +15,7 @@ public class Message {
         this.asDouble = tryParse(this.asText);
         this.date = new Date();
     }
-
+  
 
     public Message(String asText) {
        this(asText.getBytes());
